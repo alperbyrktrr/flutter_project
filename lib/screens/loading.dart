@@ -1,0 +1,1 @@
+// acilis ekranı
