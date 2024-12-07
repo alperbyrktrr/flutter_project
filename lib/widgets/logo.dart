@@ -1,1 +1,0 @@
-// kendimize ozellestirdigimiz widgetları yazıcaz
