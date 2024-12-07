@@ -20,7 +20,7 @@ class LoadingScreen extends StatelessWidget {
                 width: 300,
                 height: 300,
                 child: Image.asset(
-                  'assets/images/michealjordan.png',
+                  'assets/images/michealjordan.png', // diğer ekrana geçmek için lütfen logoya tıklayın!
                   fit: BoxFit.contain,
                 ),
               ),
