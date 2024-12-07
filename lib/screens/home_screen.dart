@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart'; // go_router import edildi
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,7 +8,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // AppBar
       appBar: AppBar(
         title: const Text('StarHoops'),
         actions: [
@@ -17,15 +17,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-
-      // Drawer (Yan Menü)
       drawer: Drawer(
         child: Column(
           children: [
             // Drawer Header
             Container(
               height: 200,
-              //color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -38,14 +35,13 @@ class HomeScreen extends StatelessWidget {
                   const Text(
                     'Kullanıcı Adı',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 18,
                     ),
                   ),
                 ],
               ),
             ),
-            // Menü öğeleri
             ListTile(
               leading: const Icon(CupertinoIcons.home),
               title: const Text('Ana Sayfa'),
@@ -53,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
+            // Diğer menü öğeleri
             ListTile(
               leading: const Icon(CupertinoIcons.person_alt),
               title: const Text('NBA Oyuncuları'),
@@ -84,20 +81,9 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-
-      // Ana içerik
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              child: const Text(''),
-            ),
-          ),
-        ],
+      body: const Center(
+        child: Text('Ana içerik buraya gelecek'),
       ),
-
-      // Alt navigasyon çubuğu
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
@@ -114,9 +100,13 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          // Navigasyon işlemleri buraya gelecek
+          if (index == 1) {
+            context.go('/favorites'); // Favori oyuncular ekranına git
+          } else if (index == 2) {
+            context.go('/profile'); // Profil ekranına git
+          }
         },
       ),
     );
   }
-} 
+}
