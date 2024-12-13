@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart'; // go_router import edildi
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,  // Arka planın tüm ekranı kaplamasına izin verir
       appBar: AppBar(
         title: const Text('StarHoops'),
         actions: [
@@ -16,20 +17,20 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {},
           ),
         ],
+        backgroundColor: Colors.transparent,  // AppBar'ı şeffaf yapıyoruz
+        elevation: 0,  // AppBar'ın gölgesini kaldırıyoruz
       ),
       drawer: Drawer(
         child: Column(
           children: [
-            // Drawer Header
             Container(
               height: 200,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
-                    CupertinoIcons.person_circle,
-                    size: 80,
-                    color: Colors.black87,
+                  CircleAvatar(
+                    radius: 40,  // Yarıçapı, fotoğrafın boyutunu belirler
+                    backgroundImage: AssetImage('assets/images/circle.jpg'),  // Fotoğrafın yolu
                   ),
                   const SizedBox(height: 10),
                   const Text(
@@ -49,10 +50,16 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            // Diğer menü öğeleri
             ListTile(
               leading: const Icon(CupertinoIcons.person_alt),
               title: const Text('NBA Oyuncuları'),
+              onTap: () {
+                context.go('/nba-players'); // NBA oyuncuları ekranına yönlendirme
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.star),
+              title: const Text('NBA Takımları'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -81,10 +88,30 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: const Center(
-        child: Text('Ana içerik buraya gelecek'),
+      body: Stack(
+        children: [
+          // Arka plan fotoğrafı tüm ekranı kaplar
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/goat.jpg',  // Fotoğrafı buraya ekleyin
+              fit: BoxFit.cover,  // Resmin tam ekranı kaplamasını sağlar
+            ),
+          ),
+          // Ana içerik
+          Positioned.fill(
+            child: Align(
+              alignment: Alignment.center,
+              child: const Text(
+                '',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.transparent,  // BottomNavigationBar'ı şeffaf yapıyoruz
+        elevation: 0,  // Gölgeyi kaldırıyoruz
         items: const [
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.home),
@@ -99,6 +126,8 @@ class HomeScreen extends StatelessWidget {
             label: 'Profil',
           ),
         ],
+        selectedItemColor: Colors.white,  // Seçilen öğe rengini beyaz yapıyoruz
+        unselectedItemColor: Colors.white70,  // Seçilmeyen öğe rengini daha açık beyaz yapıyoruz
         onTap: (index) {
           if (index == 1) {
             context.go('/favorites'); // Favori oyuncular ekranına git
