@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';  // Google Fonts import edilmesi gerekiyor
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,15 +11,25 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       extendBody: true,  // Arka planın tüm ekranı kaplamasına izin verir
       appBar: AppBar(
-        title: const Text('StarHoops'),
+        backgroundColor: Colors.white,  // AppBar'ın arka planını beyaz yapıyoruz
+        elevation: 0,  // Gölgeyi kaldırıyoruz
+        titleSpacing: 0,  // AppBar'ın başlık alanındaki boşluğu sıfırlıyoruz
+        flexibleSpace: Center(  // Burada yazıyı ortalıyoruz
+          child: Text(
+            'StarHoops',
+            style: GoogleFonts.mulish(  // Mulish fontunu uyguladık
+              fontSize: 28,  // Font boyutunu belirleyebilirsiniz
+              fontWeight: FontWeight.bold,  // Font kalınlık ayarı
+              color: Colors.black,  // Yazının rengini siyah yapıyoruz
+            ),
+          ),
+        ),
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.bell),
             onPressed: () {},
           ),
         ],
-        backgroundColor: Colors.transparent,  // AppBar'ı şeffaf yapıyoruz
-        elevation: 0,  // AppBar'ın gölgesini kaldırıyoruz
       ),
       drawer: Drawer(
         child: Column(
@@ -95,16 +106,6 @@ class HomeScreen extends StatelessWidget {
             child: Image.asset(
               'assets/images/goat.jpg',  // Fotoğrafı buraya ekleyin
               fit: BoxFit.cover,  // Resmin tam ekranı kaplamasını sağlar
-            ),
-          ),
-          // Ana içerik
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.center,
-              child: const Text(
-                '',
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              ),
             ),
           ),
         ],
