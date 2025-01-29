@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(CupertinoIcons.star),
               title: const Text('NBA Takımları'),
               onTap: () {
-                Navigator.pop(context);
+                context.go('/nba-teams'); // 🏀 NBA Takımları ekranına yönlendir
               },
             ),
             ListTile(

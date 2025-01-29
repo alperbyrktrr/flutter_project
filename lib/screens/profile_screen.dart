@@ -13,7 +13,7 @@ class ProfileScreen extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/images/kanye.jpg', // Arka plan resmi
+              'assets/images/galaksi.jpg', // Arka plan resmi
               fit: BoxFit.cover,
             ),
           ),
@@ -26,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const Text(
-                'Kullanıcı Adı',
+                'Alper Bayraktar',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -136,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 250, 250, 250)),
                 onPressed: () {
                   // Çıkış işlemi
                 },
