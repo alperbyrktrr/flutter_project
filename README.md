@@ -68,7 +68,7 @@ bir basketbol deneyimi sağlar.]
 
 ```bash
 
-git  clone [proje-adresi]
+git  clone [https://github.com/alperbyrktrr/flutter_project.git]
 
 ```
 
@@ -78,7 +78,7 @@ git  clone [proje-adresi]
 
 ```bash
 
-cd [proje-adı]
+cd [StarHoops]
 
 ```
 
