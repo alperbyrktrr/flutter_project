@@ -68,7 +68,7 @@ bir basketbol deneyimi sağlar.]
 
 ```bash
 
-git  clone [proje-adresi]
+git  clone [https://github.com/alperbyrktrr/flutter_project.git]
 
 ```
 
@@ -78,7 +78,7 @@ git  clone [proje-adresi]
 
 ```bash
 
-cd [proje-adı]
+cd [StarHoops]
 
 ```
 
@@ -121,8 +121,11 @@ lib/
 └── yardımcılar/ # Yardımcı fonksiyonlar
 
 ```
+## Demo Videosu
 
+https://github.com/user-attachments/assets/233e3eb8-7582-4021-9b7e-c6add5f71407
   
+
 
 ## Ekran Görüntüleri
 ![Image](https://github.com/user-attachments/assets/96af3c2f-8bb7-461b-acc2-e26a9085170e)
