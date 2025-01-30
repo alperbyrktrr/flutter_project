@@ -29,11 +29,11 @@ bir basketbol deneyimi sağlar.]
 
 ## Özellikler
 
-- [Ana özellik 1]
+- **Oyuncu Performans Analizi ve Maç Sonrası Değerlendirme**: Maç bittikten sonra oyuncunun performansı detaylı şekilde analiz edilir.
 
-- [Ana özellik 2]
+- **Favori Oyuncu Takibi**: Favori oyuncuların maçları, istatistikleri ve performans analizleri özel bir sekmede görüntülenebilir.
 
-- [Ana özellik 3]
+- **NBA Takım Analizleri ve Güç Sıralaması**: NBA takımlarının sezon performanslarını, galibiyet serilerini ve sakatlık durumlarını takip edebilirsiniz.
 
   
 
@@ -43,8 +43,6 @@ bir basketbol deneyimi sağlar.]
 
 - Dart
 
-- [Diğer teknolojiler]
-
   
 
 ## Başlangıç
@@ -53,11 +51,11 @@ bir basketbol deneyimi sağlar.]
 
 ### Gereksinimler
 
-- Flutter SDK (sürüm X.X.X)
+- Flutter SDK (sürüm 3.24.5)
 
-- Dart SDK (sürüm X.X.X)
+- Dart SDK (sürüm 3.5.4)
 
-- [Diğer gerekli yazılımlar]
+  
 
   
 
@@ -168,7 +166,7 @@ lib/
 
 - İstinye Üniversitesi'ne destekleri için teşekkür ederiz
 
-- [Diğer teşekkürler] 
+- Keyvan hocama emekleri için tesekkurler
 
 
 
