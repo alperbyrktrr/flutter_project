@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart'; // go_router import edildi
+import 'package:go_router/go_router.dart';
+import 'package:lottie/lottie.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
@@ -15,21 +15,26 @@ class LoadingScreen extends StatelessWidget {
           children: [
             // Logo bölümü
             GestureDetector(
-              onTap: () => context.go('/home'), // Tıklama işlevi eklendi
+              onTap: () => context.go('/home'),
               child: Container(
                 width: 300,
                 height: 300,
                 child: Image.asset(
-                  'assets/images/michealjordan.png', // diğer ekrana geçmek için lütfen logoya tıklayın!
+                  'assets/images/michealjordan.png',
                   fit: BoxFit.contain,
                 ),
               ),
             ),
             const SizedBox(height: 30),
 
-            // Yükleme göstergesi
-            const CircularProgressIndicator(
-              color: Colors.blue,
+            // Lottie Yükleme Animasyonu (Beyaz Renkli)
+            SizedBox(
+              width: 100, // Animasyon boyutu
+              height: 100,
+              child: Lottie.asset(
+                'assets/motions/loadinglottie.json',
+                fit: BoxFit.contain,
+              ),
             ),
           ],
         ),
