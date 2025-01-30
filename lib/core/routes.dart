@@ -6,6 +6,7 @@ import '../screens/profile_screen.dart';
 import '../screens/nba_players_screen.dart';
 import '../screens/nba_teams_screen.dart'; // NBA Takımları ekranını import ettik
 import '../screens/settings_screen.dart'; // Ayarlar ekranını import ettik
+import '../screens/lebron_james_detail_screen.dart'; // LeBron James detay ekranını import ettik
 
 final router = GoRouter(
   initialLocation: '/',
@@ -37,6 +38,10 @@ final router = GoRouter(
     GoRoute(
       path: '/settings', // SettingsScreen için yeni route
       builder: (context, state) => const SettingsScreen(),
+    ),
+    GoRoute(
+      path: '/lebron-james-detail', // LeBron James detay ekranı için yeni route
+      builder: (context, state) => const LeBronJamesDetailScreen(),
     ),
   ],
 );

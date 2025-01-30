@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class NBAPlayersScreen extends StatelessWidget {
   const NBAPlayersScreen({super.key});
@@ -16,35 +17,35 @@ class NBAPlayersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('NBA Oyuncuları'),
-        backgroundColor: Colors.orange,  // Daha sportif bir renk seçildi
+        backgroundColor: Colors.orange,
       ),
       body: ListView.builder(
         itemCount: players.length,
         itemBuilder: (context, index) {
           return Card(
-            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),  
-            elevation: 10,  // Gölgelendirme etkisi arttırıldı
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            elevation: 10,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),  // Köşe yuvarlama arttırıldı
+              borderRadius: BorderRadius.circular(20),
             ),
             child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),  
+              contentPadding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
               leading: Container(
-                width: 75,  // Fotoğrafın genişliği büyütüldü
-                height: 75, // Fotoğrafın yüksekliği büyütüldü
+                width: 75,
+                height: 75,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(players[index]['image']!),
-                    fit: BoxFit.cover, 
+                    fit: BoxFit.cover,
                   ),
-                  borderRadius: BorderRadius.circular(16),  // Köşe yuvarlama
+                  borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: Colors.orange, // Çerçeve rengi
-                    width: 4, // Çerçeve kalınlığı
+                    color: Colors.orange,
+                    width: 4,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.orange.withOpacity(0.5),  // Daha yumuşak gölge
+                      color: Colors.orange.withOpacity(0.5),
                       spreadRadius: 4,
                       blurRadius: 10,
                       offset: Offset(0, 4),
@@ -55,13 +56,13 @@ class NBAPlayersScreen extends StatelessWidget {
               title: Text(
                 players[index]['name']!,
                 style: TextStyle(
-                  fontSize: 26,  // Yazı boyutu büyütüldü
+                  fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87, // Yazı rengi koyulaştırıldı
+                  color: Colors.black87,
                 ),
               ),
               subtitle: Text(
-                "NBA Star",  // Alt başlık eklenebilir
+                "NBA Star",
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey[700],
@@ -70,10 +71,13 @@ class NBAPlayersScreen extends StatelessWidget {
               trailing: const Icon(
                 Icons.arrow_forward_ios,
                 size: 30,
-                color: Colors.orange,  // İkon rengi
+                color: Colors.orange,
               ),
               onTap: () {
-                // Detay sayfası eklenebilir
+                // LeBron James'e tıklayınca detay sayfasına yönlendiriyoruz
+                if (players[index]['name'] == 'LeBron James') {
+                  context.go('/lebron-james-detail');  // LeBron James detay sayfasına yönlendirme
+                }
               },
             ),
           );
