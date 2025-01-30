@@ -29,11 +29,11 @@ bir basketbol deneyimi sağlar.]
 
 ## Özellikler
 
-- [Ana özellik 1]
+- **Oyuncu Performans Analizi ve Maç Sonrası Değerlendirme**: Maç bittikten sonra oyuncunun performansı detaylı şekilde analiz edilir.
 
-- [Ana özellik 2]
+- **Favori Oyuncu Takibi**: Favori oyuncuların maçları, istatistikleri ve performans analizleri özel bir sekmede görüntülenebilir.
 
-- [Ana özellik 3]
+- **NBA Takım Analizleri ve Güç Sıralaması**: NBA takımlarının sezon performanslarını, galibiyet serilerini ve sakatlık durumlarını takip edebilirsiniz.
 
   
 
@@ -43,21 +43,22 @@ bir basketbol deneyimi sağlar.]
 
 - Dart
 
-- [Diğer teknolojiler]
-
   
 
 ## Başlangıç
 
   
 
+
+
+
 ### Gereksinimler
 
-- Flutter SDK (sürüm X.X.X)
+- Flutter SDK (sürüm 3.24.5)
 
-- Dart SDK (sürüm X.X.X)
+- Dart SDK (sürüm 3.5.4)
 
-- [Diğer gerekli yazılımlar]
+  
 
   
 
@@ -124,8 +125,15 @@ lib/
   
 
 ## Ekran Görüntüleri
+![Image](https://github.com/user-attachments/assets/96af3c2f-8bb7-461b-acc2-e26a9085170e)
+![Image](https://github.com/user-attachments/assets/6ece58a1-db27-4ea0-84db-778eda52a214)
+![Image](https://github.com/user-attachments/assets/82062393-5864-459b-9d28-062b5855f98f)
+![Image](https://github.com/user-attachments/assets/09fc4886-308f-4f3e-b070-a0e8d762da22)
+![Image](https://github.com/user-attachments/assets/aff2d04b-1fd1-4804-a54b-88d315e3fbba)
+![Image](https://github.com/user-attachments/assets/020ce2de-10cb-40c1-a800-44eaef068b73)
+![Image](https://github.com/user-attachments/assets/87753ee7-eacf-41c6-916f-bc6db31d4bb3)
+![Image](https://github.com/user-attachments/assets/ae6c8f8e-ad49-48a7-8c55-15a43d65a252)
 
-[Uygulama ekran görüntüleri buraya eklenecek]
 
   
 
@@ -161,7 +169,7 @@ lib/
 
 - İstinye Üniversitesi'ne destekleri için teşekkür ederiz
 
-- [Diğer teşekkürler] 
+- Keyvan hocama emekleri için tesekkurler
 
 
 
