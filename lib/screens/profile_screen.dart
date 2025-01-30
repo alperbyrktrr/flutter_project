@@ -42,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               const Text(
-                'kullanici@example.com',
+                'starhoops@gmail.com',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.white, // Yazı rengi beyaz

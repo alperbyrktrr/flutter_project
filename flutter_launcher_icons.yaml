@@ -1,0 +1,13 @@
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/icon.png"
+  min_sdk_android: 21 # Android minimum sdk sürümü
+  web:
+    generate: true
+    theme_color: "#232f3b"  # Web için tema rengi (isteğe bağlı)
+  windows:
+    generate: true
+    icon_size: 48 # Windows için ikon boyutu
+  macos:
+    generate: true
