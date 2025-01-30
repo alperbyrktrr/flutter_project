@@ -49,6 +49,9 @@ bir basketbol deneyimi sağlar.]
 
   
 
+
+
+
 ### Gereksinimler
 
 - Flutter SDK (sürüm 3.24.5)
