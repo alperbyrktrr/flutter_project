@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';  // Google Fonts import edilmesi gerekiyor
+import 'package:go_router/go_router.dart';  // go_router import edilmesi gerekiyor
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,16 +11,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       extendBody: true,  // Arka planın tüm ekranı kaplamasına izin verir
       appBar: AppBar(
-        backgroundColor: Colors.white,  // AppBar'ın arka planını beyaz yapıyoruz
-        elevation: 0,  // Gölgeyi kaldırıyoruz
-        titleSpacing: 0,  // AppBar'ın başlık alanındaki boşluğu sıfırlıyoruz
-        flexibleSpace: Center(  // Burada yazıyı ortalıyoruz
+        backgroundColor: Colors.white,
+        elevation: 0,
+        titleSpacing: 0,
+        flexibleSpace: Center(
           child: Text(
             'StarHoops',
-            style: GoogleFonts.mulish(  // Mulish fontunu uyguladık
-              fontSize: 28,  // Font boyutunu belirleyebilirsiniz
-              fontWeight: FontWeight.bold,  // Font kalınlık ayarı
-              color: Colors.black,  // Yazının rengini siyah yapıyoruz
+            style: GoogleFonts.mulish(
+              fontSize: 28,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
             ),
           ),
         ),
@@ -40,8 +40,8 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    radius: 40,  // Yarıçapı, fotoğrafın boyutunu belirler
-                    backgroundImage: AssetImage('assets/images/circle.jpg'),  // Fotoğrafın yolu
+                    radius: 40,
+                    backgroundImage: AssetImage('assets/images/circle.jpg'),
                   ),
                   const SizedBox(height: 10),
                   const Text(
@@ -65,14 +65,14 @@ class HomeScreen extends StatelessWidget {
               leading: const Icon(CupertinoIcons.person_alt),
               title: const Text('NBA Oyuncuları'),
               onTap: () {
-                context.go('/nba-players'); // NBA oyuncuları ekranına yönlendirme
+                context.go('/nba-players');
               },
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.star),
               title: const Text('NBA Takımları'),
               onTap: () {
-                context.go('/nba-teams'); // 🏀 NBA Takımları ekranına yönlendir
+                context.go('/nba-teams');
               },
             ),
             ListTile(
@@ -94,6 +94,7 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Ayarlar'),
               onTap: () {
                 Navigator.pop(context);
+                context.go('/settings');  // Ayarlara gitmek için yönlendirme
               },
             ),
           ],
@@ -101,18 +102,17 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Arka plan fotoğrafı tüm ekranı kaplar
           Positioned.fill(
             child: Image.asset(
-              'assets/images/goat.jpg',  // Fotoğrafı buraya ekleyin
-              fit: BoxFit.cover,  // Resmin tam ekranı kaplamasını sağlar
+              'assets/images/goat.jpg',
+              fit: BoxFit.cover,
             ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.transparent,  // BottomNavigationBar'ı şeffaf yapıyoruz
-        elevation: 0,  // Gölgeyi kaldırıyoruz
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.home),
@@ -127,13 +127,13 @@ class HomeScreen extends StatelessWidget {
             label: 'Profil',
           ),
         ],
-        selectedItemColor: Colors.white,  // Seçilen öğe rengini beyaz yapıyoruz
-        unselectedItemColor: Colors.white70,  // Seçilmeyen öğe rengini daha açık beyaz yapıyoruz
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white70,
         onTap: (index) {
           if (index == 1) {
-            context.go('/favorites'); // Favori oyuncular ekranına git
+            context.go('/favorites');
           } else if (index == 2) {
-            context.go('/profile'); // Profil ekranına git
+            context.go('/profile');
           }
         },
       ),
