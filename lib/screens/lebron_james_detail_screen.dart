@@ -53,9 +53,9 @@ class LeBronJamesDetailScreen extends StatelessWidget {
             // İstatistiklerin listelenmesi
             buildStatText('Yıl: 2024'),
             buildStatText('Takım: Los Angeles Lakers'),
-            buildStatText('Sayılar: 27.0 PPG'),
-            buildStatText('Asist: 7.3 APG'),
-            buildStatText('Rebound: 7.4 RPG'),
+            buildStatText('Sayılar: 27.0 '),
+            buildStatText('Asist: 7.3 '),
+            buildStatText('Rebound: 7.4 '),
             buildStatText('Yıldız: 18x NBA All-Star'),
             const SizedBox(height: 30),
             // Diğer İstatistikler başlığı
